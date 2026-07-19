@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Paste your lecture notes and get summaries, flashcards, and quiz questions instantly." },
       { name: "author", content: "StudyBuddy" },
       { property: "og:title", content: "StudyBuddy — AI Study Assistant" },
-      { property: "og:description", content: "Turn lecture notes into summaries, flashcards, and quizzes." },
+      { property: "og:description", content: "Paste your lecture notes and get summaries, flashcards, and quiz questions instantly." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "StudyBuddy — AI Study Assistant" },
+      { name: "twitter:description", content: "Paste your lecture notes and get summaries, flashcards, and quiz questions instantly." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a301467c-cd3f-472d-8b46-f204a40d9370/id-preview-b58e2d65--c74a3f1c-e2ca-4c1b-9989-b9b3b996c122.lovable.app-1784487715688.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a301467c-cd3f-472d-8b46-f204a40d9370/id-preview-b58e2d65--c74a3f1c-e2ca-4c1b-9989-b9b3b996c122.lovable.app-1784487715688.png" },
     ],
     links: [
       {

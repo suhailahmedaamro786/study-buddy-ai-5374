@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       { title: "StudyBuddy — AI Study Assistant" },
       { name: "description", content: "Paste your lecture notes and get summaries, flashcards, and quiz questions instantly." },
       { property: "og:title", content: "StudyBuddy — AI Study Assistant" },
-      { property: "og:description", content: "Turn lecture notes into summaries, flashcards, and quizzes." },
+      { property: "og:description", content: "Paste your lecture notes and get summaries, flashcards, and quiz questions instantly." },
     ],
   }),
   component: Index,

@@ -230,9 +230,6 @@ function Index() {
         )}
       </main>
 
-      <footer className="max-w-5xl mx-auto px-4 py-8 text-center text-xs text-muted-foreground">
-        Built with Lovable AI · Your notes stay in your browser
-      </footer>
     </div>
   );
 }

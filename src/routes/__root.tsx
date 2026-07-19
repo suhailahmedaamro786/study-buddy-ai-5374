@@ -123,8 +123,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <div className="flex-1">
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </div>
+        <footer className="max-w-5xl mx-auto w-full px-4 py-8 text-center text-xs text-muted-foreground">
+          © 2026 Suhail Ahmed Aamro · Built with Lovable AI · Your notes stay in your browser
+        </footer>
+      </div>
     </QueryClientProvider>
   );
 }

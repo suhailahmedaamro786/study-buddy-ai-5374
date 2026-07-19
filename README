@@ -1,0 +1,57 @@
+# StudyBuddy 📚
+
+AI Study Assistant that turns lecture notes into summaries, flashcards, and quiz questions in seconds.
+
+## 🌐 Live URL
+[Click here to use StudyBuddy](https://your-app-url.lovable.app)
+
+## 🎯 What It Does
+Students paste their lecture notes and get:
+- 📝 100-word summary with 3 key points
+- 🃏 5 flashcards for revision
+- ❓ 3 multiple-choice quiz questions
+- 📋 One-click copy to clipboard
+
+## 🤖 AI Feature (Custom System Prompt)
+When the user submits notes, the AI follows these instructions:
+
+> "You are a patient and encouraging study assistant. Your task is to help students understand complex topics simply. When given notes or text:
+> 1. Create a 100-word summary that captures the 3 most important points
+> 2. Generate 5 flashcards with questions and answers
+> 3. Create 3 multiple-choice quiz questions with correct answers marked with *
+> 4. End with one motivational tip
+> Keep explanations simple — like explaining to a friend."
+
+## 🛠️ Tools Used
+- **Lovable AI** (no-code builder)
+- **Built-in AI Connector** (OpenAI/GPT)
+- **Tailwind CSS** (styling)
+- **LocalStorage** (saves history in browser)
+
+## 📸 Screenshots
+
+### Home Page — Input
+![Input page](screenshot1.png)
+*Users paste their notes here*
+
+### AI Output — Summary & Flashcards
+![Summary & Flashcards](screenshot2.png)
+*AI generates concise summary and revision cards*
+
+### Quiz Questions
+![Quiz Questions](screenshot3.png)
+*Multiple-choice questions to test understanding*
+
+## 🚀 How to Run
+1. Clone the repo: `git clone https://github.com/yourusername/studysnap.git`
+2. Open `index.html` in browser (or deploy on Vercel)
+3. (Optional) Add API key in .env for AI calls
+
+## 📊 Features
+- [x] Paste text input
+- [x] AI-powered summary generation
+- [x] 5 flashcards with Q&A
+- [x] 3 quiz questions with answers
+- [x] Copy to clipboard
+- [x] Local storage for note history
+- [x] Responsive mobile design

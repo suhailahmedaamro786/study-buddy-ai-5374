@@ -10,6 +10,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { ThemeProvider } from "@/hooks/use-theme";
+import { supabase } from "@/integrations/supabase/client";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -91,11 +93,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a301467c-cd3f-472d-8b46-f204a40d9370/id-preview-b58e2d65--c74a3f1c-e2ca-4c1b-9989-b9b3b996c122.lovable.app-1784487715688.png" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
     ],
   }),
   shellComponent: RootShell,
@@ -120,18 +120,30 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    const { data: sub } = supabase.auth.onAuthStateChange((event) => {
+      if (event !== "SIGNED_IN" && event !== "SIGNED_OUT" && event !== "USER_UPDATED") return;
+      router.invalidate();
+      if (event !== "SIGNED_OUT") queryClient.invalidateQueries();
+    });
+    return () => sub.subscription.unsubscribe();
+  }, [router, queryClient]);
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <div className="flex-1">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
+      <ThemeProvider>
+        <div className="flex min-h-screen flex-col">
+          <div className="flex-1">
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </div>
+          <footer className="max-w-5xl mx-auto w-full px-4 py-8 text-center text-xs text-muted-foreground">
+            © 2026 Suhail Ahmed Aamro · Built with Lovable AI · Your notes stay in your browser
+          </footer>
         </div>
-        <footer className="max-w-5xl mx-auto w-full px-4 py-8 text-center text-xs text-muted-foreground">
-          © 2026 Suhail Ahmed Aamro · Built with Lovable AI · Your notes stay in your browser
-        </footer>
-      </div>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

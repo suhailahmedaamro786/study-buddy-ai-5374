@@ -1,57 +1,48 @@
-# StudyBuddy 📚
+# 📚 Study Buddy AI — Intelligent Learning & Note Assistant
 
-AI Study Assistant that turns lecture notes into summaries, flashcards, and quiz questions in seconds.
+> **ACT AI Final Capstone Project**  
+> *A modern, AI-powered study companion designed to summarize notes, answer student queries, and streamline learning workflows.*
 
-## 🌐 Live URL
-[Click here to use StudyBuddy](https://your-app-url.lovable.app)
+---
 
-## 🎯 What It Does
-Students paste their lecture notes and get:
-- 📝 100-word summary with 3 key points
-- 🃏 5 flashcards for revision
-- ❓ 3 multiple-choice quiz questions
-- 📋 One-click copy to clipboard
+## 🔗 Project Links
 
-## 🤖 AI Feature (Custom System Prompt)
-When the user submits notes, the AI follows these instructions:
+* 🌐 **Live Deployed App:** [https://study-buddy-ai-5374.lovable.app](https://study-buddy-ai-5374.lovable.app)
+* 💻 **GitHub Repository:** [https://github.com/suhailahmedaamro786/study-buddy-ai-5374](https://github.com/suhailahmedaamro786/study-buddy-ai-5374)
 
-> "You are a patient and encouraging study assistant. Your task is to help students understand complex topics simply. When given notes or text:
-> 1. Create a 100-word summary that captures the 3 most important points
-> 2. Generate 5 flashcards with questions and answers
-> 3. Create 3 multiple-choice quiz questions with correct answers marked with *
-> 4. End with one motivational tip
-> Keep explanations simple — like explaining to a friend."
+---
 
-## 🛠️ Tools Used
-- **Lovable AI** (no-code builder)
-- **Built-in AI Connector** (OpenAI/GPT)
-- **Tailwind CSS** (styling)
-- **LocalStorage** (saves history in browser)
+## 🎯 Abstract & Problem Statement
 
-## 📸 Screenshots
+Students and self-learners often struggle with information overload, managing lengthy lecture notes, and getting quick, accurate answers to specific study questions. Traditional note-taking apps lack intelligent features that assist in active retention and quick comprehension.
 
-### Home Page — Input
-![Input page](screenshot1.png)
-*Users paste their notes here*
+**Study Buddy AI** solves this problem by providing a centralized digital library equipped with an autonomous AI assistant that helps students summarize, organize, and interact with their study materials seamlessly.
 
-### AI Output — Summary & Flashcards
-![Summary & Flashcards](screenshot2.png)
-*AI generates concise summary and revision cards*
+---
 
-### Quiz Questions
-![Quiz Questions](screenshot3.png)
-*Multiple-choice questions to test understanding*
+## ✨ Key Features
 
-## 🚀 How to Run
-1. Clone the repo: `git clone https://github.com/yourusername/studysnap.git`
-2. Open `index.html` in browser (or deploy on Vercel)
-3. (Optional) Add API key in .env for AI calls
+* 📝 **Smart Note Management:** Create, save, and manage study notes locally in your browser.
+* 🤖 **AI-Powered Assistance:** Integrated AI features to generate concise summaries, highlight key concepts, and answer study queries.
+* ⚡ **Fast & Responsive UI:** Clean, intuitive interface optimized for effortless study sessions.
+* 🔒 **Privacy First:** Client-side storage ensures study notes remain secure on the user's browser.
 
-## 📊 Features
-- [x] Paste text input
-- [x] AI-powered summary generation
-- [x] 5 flashcards with Q&A
-- [x] 3 quiz questions with answers
-- [x] Copy to clipboard
-- [x] Local storage for note history
-- [x] Responsive mobile design
+---
+
+## 🛠️ Tech Stack & Tools
+
+* **Frontend Framework:** React / TypeScript / Vite
+* **Styling & UI Components:** Tailwind CSS & Lucide Icons
+* **AI Tooling & IDE:** Built with Lovable AI
+* **Deployment:** Hosted live on Lovable App Platform
+
+---
+
+## 🚀 Getting Started Locally
+
+To run this project on your local machine, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/suhailahmedaamro786/study-buddy-ai-5374.git](https://github.com/suhailahmedaamro786/study-buddy-ai-5374.git)
+   cd study-buddy-ai-5374

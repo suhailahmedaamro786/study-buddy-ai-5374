@@ -137,5 +137,3 @@ Freelance Web Developer | ACT AI Program Participant
 This project was developed as a capstone submission for the **ACT AI Program (HEC / AI SkillBridge / PMYP)**. © 2026 Suhail Ahmed Aamro. All rights reserved.
 
 ```
-
-GitHub pe README edit karte waqt puraana content select-delete karke ye pura block paste kar dena, phir Commit changes.

@@ -3,9 +3,21 @@
 > **ACT AI Final Capstone Project**
 > A modern, AI-powered study companion designed to summarize notes, answer student queries, and streamline learning workflows.
 
-[![Live App](https://img.shields.io/badge/Live-Demo-brightgreen)](https://study-buddy-ai-5374.lovable.app)
-[![Built with Lovable](https://img.shields.io/badge/Built%20with-Lovable%20AI-blueviolet)](https://lovable.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-96.3%25-blue)](#)
+[
+
+![Live App](https://img.shields.io/badge/Live-Demo-brightgreen)
+
+](https://study-buddy-ai-5374.lovable.app)
+[
+
+![Built with Lovable](https://img.shields.io/badge/Built%20with-Lovable%20AI-blueviolet)
+
+](https://lovable.dev)
+[
+
+![TypeScript](https://img.shields.io/badge/TypeScript-96.3%25-blue)
+
+](#)
 
 ---
 
@@ -51,6 +63,7 @@ Students and self-learners often struggle with information overload, managing le
 ## 📂 Project Structure
 
 ```
+
 study-buddy-ai-5374/
 ├── .lovable/          # Lovable AI project configuration
 ├── public/            # Static assets
@@ -122,3 +135,7 @@ Freelance Web Developer | ACT AI Program Participant
 ## 📄 License
 
 This project was developed as a capstone submission for the **ACT AI Program (HEC / AI SkillBridge / PMYP)**. © 2026 Suhail Ahmed Aamro. All rights reserved.
+
+```
+
+GitHub pe README edit karte waqt puraana content select-delete karke ye pura block paste kar dena, phir Commit changes.

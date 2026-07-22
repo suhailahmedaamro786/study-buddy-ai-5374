@@ -60,52 +60,6 @@ Students and self-learners often struggle with information overload, managing le
 
 ---
 
-## 🤖 AI Feature Details
-
-The AI study assistant analyzes pasted text or uploaded PDFs and images (via OCR) and automatically produces a structured study set:
-
-- **Smart Summary** — A ~100-word summary capturing the three most important points.
-- **Key Concept Flashcards** — Five question-and-answer flashcards for active recall.
-- **Quiz Questions** — Three multiple-choice questions with one marked correct answer.
-- **Motivational Tip** — A short encouraging tip to keep the learner motivated.
-
-### Model
-
-Study material generation and document/image text extraction both use:
-
-- `google/gemini-2.5-flash` via the Lovable AI Gateway.
-
-### System Prompt
-
-The exact system prompt sent to the model is:
-
-```text
-You are a patient and encouraging study assistant. Your task is to help students understand complex topics simply. When given notes or text:
-
-1. Create a 100-word summary that captures the 3 most important points
-2. Generate 5 flashcards (each with a question and answer) that test understanding
-3. Create 3 quiz questions (multiple choice) with the correct answer marked with an asterisk (*)
-4. End with one short motivational tip
-
-Rules:
-- Keep explanations simple — like you're explaining to a friend
-- Never give direct answers to homework, but always guide understanding
-- Use clear formatting with headings for each section
-- Keep the tone warm and encouraging
-
-Respond ONLY with valid JSON matching this exact shape (no markdown code fences):
-{
-  "title": "string (short 3-6 word topic label)",
-  "summary": "string (~100 words)",
-  "flashcards": [{ "question": "string", "answer": "string" }],
-  "quiz": [{ "question": "string", "choices": ["string", "string", "string", "string"], "correctIndex": 0 }],
-  "tip": "string"
-}
-Provide exactly 5 flashcards and 3 quiz questions. correctIndex is 0-based.
-```
-
----
-
 ## 📂 Project Structure
 
 ```

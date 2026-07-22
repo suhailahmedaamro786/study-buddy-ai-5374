@@ -47,6 +47,21 @@ Students and self-learners often struggle with information overload, managing le
 
 ---
 
+## 📸 Screenshots
+
+| | |
+|---|---|
+| ![Login screen](public/screenshots/01-login.png) | ![Google OAuth](public/screenshots/02-google-oauth.png) |
+| **Login / Sign up** — Email/password auth with Google OAuth option. | **Google OAuth** — One-tap sign-in via Google accounts. |
+| ![Study input](public/screenshots/03-study-input.png) | ![Study results](public/screenshots/04-study-results.png) |
+| **Study input** — Paste notes or upload a PDF/image to get started. | **Generated study materials** — AI-generated summary, flashcards, and quiz. |
+| ![Library](public/screenshots/05-library.png) | |
+| **Your library** — All saved study sessions in one place, ready to revisit. | |
+
+
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology |

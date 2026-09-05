@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { ThemeProvider } from "@/hooks/use-theme";
 import { supabase } from "@/integrations/supabase/client";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { AppNavbar } from "@/components/AppNavbar";
 
 function NotFoundComponent() {
   return (
@@ -89,8 +90,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "StudyBuddy — AI Study Assistant" },
       { name: "twitter:description", content: "Paste your lecture notes and get summaries, flashcards, and quiz questions instantly." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a301467c-cd3f-472d-8b46-f204a40d9370/id-preview-b58e2d65--c74a3f1c-e2ca-4c1b-9989-b9b3b996c122.lovable.app-1784487715688.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a301467c-cd3f-472d-8b46-f204a40d9370/id-preview-b58e2d65--c74a3f1c-e2ca-4c1b-9989-b9b3b996c122.lovable.app-1784487715688.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a301467c-cd3f-472d-8b46-f204a40d9370/id-preview-b58e2d65--c74a3f1c-e2ca-4c1b-9989-b9b3b996c122.lovable.app" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a301467c-cd3f-472d-8b46-f204a40d9370/id-preview-b58e2d65--c74a3f1c-e2ca-4c1b-9989-b9b3b996c122.lovable.app" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -135,12 +136,66 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <div className="flex min-h-screen flex-col">
+          <AppNavbar />
           <div className="flex-1">
             {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
             <Outlet />
           </div>
-          <footer className="max-w-5xl mx-auto w-full px-4 py-8 text-center text-xs text-muted-foreground">
-            © 2026 Suhail Ahmed Aamro · Built with Lovable AI · Your notes stay in your browser
+          <footer className="bg-background border-t border-border">
+            <div className="max-w-7xl mx-auto px-4 py-8">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                {/* Brand */}
+                <div>
+                  <h3 className="font-bold text-lg mb-2">StudyBuddy</h3>
+                  <p className="text-sm text-muted-foreground">Turn your notes into study gold with AI.</p>
+                </div>
+
+                {/* Features */}
+                <div>
+                  <h4 className="font-semibold text-sm mb-3">Features</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="/app" className="hover:text-primary transition-colors">Study Assistant</a></li>
+                    <li><a href="/app/stats" className="hover:text-primary transition-colors">Analytics</a></li>
+                    <li><a href="/app/search" className="hover:text-primary transition-colors">Search</a></li>
+                    <li><a href="/app/clock" className="hover:text-primary transition-colors">World Clock</a></li>
+                  </ul>
+                </div>
+
+                {/* Resources */}
+                <div>
+                  <h4 className="font-semibold text-sm mb-3">Resources</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="#" className="hover:text-primary transition-colors">Documentation</a></li>
+                    <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
+                    <li><a href="#" className="hover:text-primary transition-colors">Support</a></li>
+                    <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
+                  </ul>
+                </div>
+
+                {/* Social */}
+                <div>
+                  <h4 className="font-semibold text-sm mb-3">Connect</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li><a href="https://github.com/suhailahmedaamro786" className="hover:text-primary transition-colors">GitHub</a></li>
+                    <li><a href="https://twitter.com" className="hover:text-primary transition-colors">Twitter</a></li>
+                    <li><a href="https://linkedin.com" className="hover:text-primary transition-colors">LinkedIn</a></li>
+                    <li><a href="mailto:support@studybuddy.com" className="hover:text-primary transition-colors">Email</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Bottom Bar */}
+              <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p className="text-xs text-muted-foreground">
+                  © 2026 StudyBuddy · Built with Lovable AI · Your notes stay in your browser
+                </p>
+                <div className="flex gap-6 mt-4 md:mt-0 text-xs text-muted-foreground">
+                  <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+                  <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+                  <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+                </div>
+              </div>
+            </div>
           </footer>
         </div>
       </ThemeProvider>
